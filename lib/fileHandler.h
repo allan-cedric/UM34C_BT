@@ -8,8 +8,8 @@
 #define UM34C_DATA_FILE_NAME        "um34c_data_%Y%m%d_%H%M%S.csv"  // "um34c_data_20200214_204518.csv"
 #define UM34C_DATA_FILE_NAME_LEN     31
 // #define UM34C_DATA_CSV_HEADERS "Time;Voltage;Current;\n"
-// #define UM34C_DATA_CSV_HEADERS "Time;Voltage;Current;Power;Resistance;Temperature;mAh;mWh;\n"
-#define UM34C_DATA_CSV_HEADERS "Time;Voltage;Current;Temperature;mAh;mWh;\n"  // Power and resistance can be calculated from Voltage and current
+#define UM34C_DATA_CSV_HEADERS "Time;Voltage;Current;Power;Resistance;Temperature;mAh;mWh;\n"
+// #define UM34C_DATA_CSV_HEADERS "Time;Voltage;Current;Temperature;mAh;mWh;\n"  // Power and resistance can be calculated from Voltage and current
 
 #define BYTES_TO_kB(bytes)  ((bytes)/1000.0)
 #define BYTES_TO_MB(bytes)  ((bytes)/(1000*1000.0))
