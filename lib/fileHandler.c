@@ -113,12 +113,15 @@ fileHandler_info_E byAppendToCSVfile(fileHandler_config_S *pSConfig, um34c_data_
             // CSV headers: "Time;Voltage;Current;Power;Resistance;Temperature;mAh;mWh;\n"
             // CSV headers: "Time;Voltage;Current;Temperature;mAh;mWh;\n"
             // Power and resistance can be calculated from Voltage and current!
-            fprintf(fp, "%s;%0.2f;%01.3f;%0.3f;%0.1f;%d;%d;%d;\n", pSData->szTimeDate, 
+            // fprintf(fp, "%s;%0.2f;%01.3f;%0.3f;%0.1f;%d;%d;%d;\n", pSData->szTimeDate, 
             // fprintf(fp, "%s;%0.2f;%01.3f;%d;%d;%d;\n", pSData->szTimeDate, 
-                    pSData->fVoltage, pSData->fCurrent, pSData->fPower,
-                    pSData->fResistance, pSData->byTemperatureC,
-                    pSData->wThreshold_mAh,
-                    pSData->wThreshold_mWh
+                    // pSData->fVoltage, pSData->fCurrent, pSData->fPower,
+                    // pSData->fResistance, pSData->byTemperatureC,
+                    // pSData->wThreshold_mAh,
+                    // pSData->wThreshold_mWh
+                    // );
+            fprintf(fp, "%s;%0.2f;%01.3f;%0.3f;\n", pSData->szTimeDate, 
+                    pSData->fVoltage, pSData->fCurrent, pSData->fPower
                     );
             pSConfig->dwNumbOfAppends++;
 
